@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os 
+from django.urls import reverse_lazy
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,9 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-c1jyirw=yo3882)5zozb*2)y9+mwkp%$#u2r#%#djd@7kgnnyj'
+SECRET_KEY = 'django-insecure-&_ed3rqd%y)(qx43fkng58t+5%$!ixfamza!7#ofj4x%0ha9tw'
 
 AUTH_USER_MODEL = 'usuarios.Usuario' 
+
+LOGIN_REDIRECT_URL = reverse_lazy('home')
+LOGOUT_REDIRECT_URL = reverse_lazy('home')
+LOGIN_URL = reverse_lazy('login')
+
 
 
 # Application definition
@@ -34,8 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #LOCAL APPS-- abajo de esta linea ponemos las apps que vamos a crear, no se olviden de la coma al final
+    #Local apps
     'apps.usuarios',
+    'apps.noticias',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +61,8 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(os.path.dirname(BASE_DIR),'templates')],
+        'DIRS': [os.path.join(os.path.dirname(BASE_DIR),'templates')
+],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,6 +84,7 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
+"""
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -89,7 +99,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+"""
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -109,9 +119,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-#Este es para cargar las herencia de los templates que creamos
 STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR),'static'),)
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

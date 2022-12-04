@@ -16,11 +16,29 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.contrib.auth import views as auth
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #AL AGREGAR NUEVAS URLS NO SE OLVIDEN DE LAS COMAS AL FINAL
     path('', views.Home, name = 'home'),
-    path('Nosotros/',views.Nosotros, name = 'nosotros'),
+    path('Nosotros/', views.Nosotros, name = 'nosotros'),
 
+
+#   NO OLVIDAR COMA AL FINAL DE CADA URL, ES UNA TUPLA
+
+#LOGIN
+    path('login/',auth.LoginView.as_view(template_name='usuarios/login.html'),name='login'),
+    path('logout/',auth.LogoutView.as_view(),name="logout"),
+
+
+# URL DE APLICACIONES
+    path('Noticias/', include('apps.noticias.urls')),
+    path('Usuario/',include('apps.usuarios.urls')),
+
+
+
+
+
+    
 ]
