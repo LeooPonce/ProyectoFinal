@@ -238,7 +238,7 @@ h6 {
 
 .footer {
     background-image: none;
-    background-color: #000000;
+    background-color: black;
     border: 6px solid #000000;
     -webkit-box-shadow: inset 0px 0px 0px 1px #333333;
     -moz-box-shadow: inset 0px 0px 0px 1px #333333;
@@ -249,14 +249,8 @@ h6 {
     border-color: #333333;
 }
 
-.footer .widget-title,
-.blog-list-widget .mb-1,
-.blog-list-widget .mb-1:hover,
-.footer a,
-.footer p,
-.blog-list-widget small {
-    color: #ffffff ;
-}
+
+
 
 .blog-list-widget img {
     background-color: #333333;

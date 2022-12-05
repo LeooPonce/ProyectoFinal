@@ -658,7 +658,7 @@ div.tab button:hover {
 
 .footer h5,
 .footer ul li a {
-    color: #111111;
+    color: #ff0000;
 }
 
 .demos .blog-meta h4 {
@@ -667,9 +667,8 @@ div.tab button:hover {
 }
 
 .footer a,
-.footer p,
-.blog-list-widget small {
-    color: rgb(255, 255, 255, 0.6) !important
+.footer p {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-text .fa {
@@ -1227,7 +1226,7 @@ hr.invis3 {
     background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 50%);
     background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 50%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 50%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000', GradientType=1);
+    filter: progid: DXImageTransform.Microsoft.gradient startColorstr='#000000', endColorstr='#00000000', GradientType=1;
 }
 
 .post-media:hover .hovereffect span::before,
@@ -1437,6 +1436,7 @@ hr.invis3 {
 }
 
 .footer-text p {
+    color: white;
     margin-bottom: 0;
     padding: 1rem 0 1.2rem;
 }
