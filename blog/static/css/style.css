@@ -598,7 +598,7 @@ div.tab button:hover {
 
 .footer {
     padding: 4rem 0 4rem;
-    background: url(images/footer.png) repeat-x center bottom #edeff2;
+    background: url(img/footer.png) repeat-x center bottom #edeff2;
 }
 
 .footer.wb {
@@ -669,7 +669,7 @@ div.tab button:hover {
 .footer a,
 .footer p,
 .blog-list-widget small {
-    color: rgba(0, 0, 0, 0.6) !important;
+    color: rgb(255, 255, 255, 0.6) !important
 }
 
 .footer-text .fa {
@@ -679,7 +679,7 @@ div.tab button:hover {
 
 .dmtop {
     background-color: #111111;
-    background-image: url(images/arrow.png);
+    background-image: url(img/arrow.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: 9999;

@@ -92,7 +92,7 @@ h6 {
 }
 
 .section.lb {
-    background-color: #f1f1f1;
+    background-image: url('static/img/fondoBlog.svg');
 }
 
 #cta {
@@ -352,7 +352,7 @@ a:focus,
 
 .market-header .navbar,
 .newsletter-widget.text-center {
-    border-color: #46C2CB;
+    border-color: #9AB3F5 !important;
 }
 
 .color-yellow a,
@@ -364,7 +364,7 @@ a:focus,
 .dropdown-item:hover,
 .bg-inverse {
     color: #46C2CB ;
-    background-color: #46C2CB;
+    background-color: #9AB3F5 !important;
 }
 
 .registro{
