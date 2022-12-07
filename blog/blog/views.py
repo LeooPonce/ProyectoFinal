@@ -13,3 +13,9 @@ def Mision(request):
 
 def Galeria(request):
 	return render(request, 'galeria.html')
+
+def Esculturas(request):
+	return render(request, 'galeriaEsculturas.html')
+
+def Escultores(request):
+	return render(request, 'galeriaEscultores.html')

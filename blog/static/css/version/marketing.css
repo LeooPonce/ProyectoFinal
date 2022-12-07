@@ -369,3 +369,6 @@ a:focus,
     padding: 100px; 
     
 }
+.sidebar .widget-no-style .newsletter-widget a{
+    width: 30px;
+}
