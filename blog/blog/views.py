@@ -7,3 +7,9 @@ def Home(request):
 
 def Nosotros(request):
 	return render(request, 'nosotros.html')
+
+def Mision(request):
+	return render(request, 'mision.html')
+
+def Galeria(request):
+	return render(request, 'galeria.html')

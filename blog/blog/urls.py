@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Home, name = 'home'),
     path('Nosotros/', views.Nosotros, name = 'nosotros'),
+    path('Mision/',views.Mision, name = 'mision'),
+    path('Galeria/',views.Galeria, name = 'galeria'),
 
 
 #   NO OLVIDAR COMA AL FINAL DE CADA URL, ES UNA TUPLA
